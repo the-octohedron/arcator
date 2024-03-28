@@ -1,0 +1,51 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2017 [renaars](https://vuo.org/user/105)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+BecameFalse [type="vuo.event.becameFalse2" version="2.0.0" label="Became False|<refresh>refresh\l|<value>value\l|<becameFalse>becameFalse\r" pos="540,90"];
+BecameTrue [type="vuo.event.becameTrue" version="1.0.0" label="Became True|<refresh>refresh\l|<value>value\l|<becameTrue>becameTrue\r" pos="540,150"];
+Changed2 [type="vuo.event.changed2.VuoInteger" version="2.0.0" label="Changed|<refresh>refresh\l|<value>value\l|<changed>changed\r" pos="480,270"];
+Count [type="vuo.math.count.VuoReal" version="1.0.0" label="Count|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<count>count\r" pos="705,195" _increment="1.0" _decrement="1.0" _setCount="0"];
+FilterController [type="vuo.midi.filter.controller" version="2.0.0" label="Filter Controller|<refresh>refresh\l|<controller>controller\l|<channel>channel\l|<controllerNumber>controllerNumber\l|<value>value\r" pos="300,180" _channel="2"];
+FilterController2 [type="vuo.midi.filter.controller" version="2.0.0" label="Filter Controller|<refresh>refresh\l|<controller>controller\l|<channel>channel\l|<controllerNumber>controllerNumber\l|<value>value\r" pos="300,270" _channel="5"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-345,15" _started_eventThrottling="enqueue"];
+GetControllerValues [type="vuo.midi.get.controller" version="1.0.0" label="Get Controller Values|<refresh>refresh\l|<controller>controller\l|<channel>channel\r|<controllerNumber>controllerNumber\r|<value>value\r" pos="-30,360"];
+HoldValue2 [type="vuo.data.hold.VuoReal" version="2.0.0" label="Hold Value|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="840,120"];
+HoldValue5 [type="vuo.data.hold.VuoMidiController" version="2.0.0" label="Hold Value|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="705,480"];
+IsIntegerNonzero2 [type="vuo.type.integer.boolean" version="1.0.1" label="Is Integer Nonzero|<refresh>refresh\l|<integer>integer\l|<boolean>boolean\r" pos="690,135"];
+IsIntegerNonzero3 [type="vuo.type.integer.boolean" version="1.0.1" label="Is Integer Nonzero|<refresh>refresh\l|<integer>integer\l|<boolean>boolean\r" pos="780,75"];
+IsRealNonzero2 [type="vuo.type.real.boolean" version="1.0.0" label="Is Real Nonzero|<refresh>refresh\l|<real>real\l|<boolean>boolean\r" pos="1005,180"];
+MakeController [type="vuo.midi.make.controller" version="1.0.0" label="Make Controller|<refresh>refresh\l|<channel>channel\l|<controllerNumber>controllerNumber\l|<value>value\l|<controller>controller\r" pos="510,510" _channel="16" _value="60"];
+ReceiveMIDIEvents [type="vuo.midi.receive" version="2.1.1" label="Receive MIDI Events|<refresh>refresh\l|<device>device\l|<receivedNote>receivedNote\r|<receivedController>receivedController\r|<receivedPitchBend>receivedPitchBend\r" pos="-180,165" _device="{\"id\":-1,\"name\":\"Midi Fighter Twister\"}" _receivedNote_eventThrottling="enqueue" _receivedController_eventThrottling="enqueue" _receivedPitchBend_eventThrottling="enqueue"];
+SelectEventOutput [type="vuo.select.out.boolean.event" version="2.0.0" label="Select Event Output|<refresh>refresh\l|<which>which\l|<in>in\l|<falseOption>falseOption\r|<trueOption>trueOption\r" pos="1050,120"];
+SendMIDIEvent [type="vuo.midi.send" version="2.1.0" label="Send MIDI Event|<refresh>refresh\l|<device>device\l|<sendNote>sendNote\l|<sendController>sendController\l|<sendPitchBend>sendPitchBend\l" pos="885,465" _device="{\"id\":-1,\"name\":\"To VDMX\"}"];
+SpinOffEvents [type="vuo.event.spinOffEvents" version="1.0.0" label="Spin Off Events|<refresh>refresh\l|<fire>fire\l|<spunOffIndex>spunOffIndex\r" pos="375,-105" _fire="2" _spunOffIndex_eventThrottling="enqueue"];
+
+BecameFalse:becameFalse -> HoldValue2:refresh;
+BecameTrue:becameTrue -> Count:setCount;
+Changed2:changed -> Count:increment;
+Count:count -> HoldValue2:newValue;
+FilterController2:value -> Changed2:value;
+FilterController:value -> IsIntegerNonzero2:integer;
+FilterController:value -> IsIntegerNonzero3:integer;
+FireOnStart:started -> ReceiveMIDIEvents:refresh;
+GetControllerValues:controllerNumber -> FilterController2:controllerNumber;
+GetControllerValues:controllerNumber -> FilterController:controllerNumber;
+GetControllerValues:controllerNumber -> MakeController:controllerNumber;
+HoldValue2:heldValue -> IsRealNonzero2:real;
+HoldValue5:heldValue -> SendMIDIEvent:sendController;
+IsIntegerNonzero2:boolean -> BecameTrue:value;
+IsIntegerNonzero3:boolean -> BecameFalse:value;
+IsRealNonzero2:boolean -> SelectEventOutput:which;
+MakeController:controller -> HoldValue5:newValue;
+ReceiveMIDIEvents:receivedController -> FilterController2:controller;
+ReceiveMIDIEvents:receivedController -> FilterController:controller;
+ReceiveMIDIEvents:receivedController -> GetControllerValues:controller;
+SelectEventOutput:falseOption -> HoldValue5:refresh;
+}
