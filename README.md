@@ -1,26 +1,21 @@
 # ARCATOR
 MacOS Application that extends the functionality of the Midi Fighter Twister.  
-Running this application you can use the “push” functionality separate from the “push&rotate” functionality.  
-The app listens if you turn the encoder while pushing it. If not, it sends an extra midi control signal on another channel. 
- 
-In VDMX, I have the "push" linked to a sliders presets, the "push&rotate" to that sliders min envelope and the normal rotate to that sliders max envelope.
+By running this application you can use the “push” functionality separate from the “push&rotate” functionality.  
+The app listens if you turn the encoder while pushing it. If not, it sends an midi signal on release. 
 
-This is programmed in VUO, but it can easily be replicated in other programming languages which offer support/have a library for Midi.
+Programmed in VUO, but it can easily be replicated in other programming languages which offer support/have a library for Midi.
 
 ## Setting up your Midi Fighter Twister
 For this to work, inside the [Midi Fighter Utility.app](https://store.djtechtools.com/pages/midi-fighter-utility) you need to set the Encoder settings > Switch Action Type to "Shift Encoder Hold"
 
 ## Making it work with VDMX
-As default, the midi changes are send to VDMX.
+As default, the midi changes are send to VDMX. So it should work out of the box.  
+In VDMX, I have the "push" linked to a sliders presets, the "push&rotate" to that sliders min envelope and the normal rotate to that sliders max envelope.  
 
-## Making it work with Resolume Arena
-Working on an example to
+Example .vdmx5 file is included
 
 ## Releases
 Future compiled versions will be made available as releases, once Resolume support is up and running.
-
-## examples
-There are example files 
 
 ## How it works
 The app listens to the midi signals send from the Midi Fighter Twister.

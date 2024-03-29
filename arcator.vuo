@@ -2,76 +2,102 @@
  * @file
  * This composition does...
  *
- * @lastSavedInVuoVersion 2.4.4
  * @copyright Copyright © 2017 [renaars](https://vuo.org/user/105)
- * @see This is a Vuo Composition source code file.  See https://vuo.org for further information.
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
  */
 
 digraph G
 {
-Add3 [type="vuo.math.add.VuoInteger" version="2.1.1" label="Add|<refresh>refresh\l|<values>values\l|<sum>sum\r" pos="705,-225"];
-Add4 [type="vuo.math.add.VuoInteger" version="2.1.1" label="Add|<refresh>refresh\l|<values>values\l|<sum>sum\r" pos="1065,-60"];
+Add2 [type="vuo.math.add.VuoInteger" version="2.0.0" label="Add|<refresh>refresh\l|<values>values\l|<sum>sum\r" pos="1590,-240"];
+Add3 [type="vuo.math.add.VuoInteger" version="2.0.0" label="Add|<refresh>refresh\l|<values>values\l|<sum>sum\r" pos="705,-225"];
+Add4 [type="vuo.math.add.VuoInteger" version="2.0.0" label="Add|<refresh>refresh\l|<values>values\l|<sum>sum\r" pos="1065,-60"];
+Add6 [type="vuo.math.add.VuoInteger" version="2.0.0" label="Add|<refresh>refresh\l|<values>values\l|<sum>sum\r" pos="1935,-240"];
+BuildList3 [type="vuo.list.build.VuoInteger" version="1.0.1" label="Build List|<refresh>refresh\l|<fire>fire\l|<builtItem>builtItem\l|<builtList>builtList\r|<buildItem>buildItem\r" pos="1335,-600" _fire="64" _builtList_eventThrottling="enqueue" _buildItem_eventThrottling="enqueue"];
 BuildList5 [type="vuo.list.build.VuoBoolean" version="1.0.1" label="Build List|<refresh>refresh\l|<fire>fire\l|<builtItem>builtItem\l|<builtList>builtList\r|<buildItem>buildItem\r" pos="45,-375" _fire="64" _builtList_eventThrottling="enqueue" _buildItem_eventThrottling="enqueue"];
-ChangeItemInList5 [type="vuo.list.change.VuoBoolean" version="1.1.1" label="Change Item in List|<refresh>refresh\l|<list>list\l|<position>position\l|<newItem>newItem\l|<expandListIfNeeded>expandListIfNeeded\l|<modifiedList>modifiedList\r" pos="825,-225" _expandListIfNeeded="false"];
-ConvertTextToInteger [type="vuo.type.text.integer" version="1.0.1" label="Convert Text to Integer|<refresh>refresh\l|<text>text\l|<integer>integer\r" pos="705,375"];
-CutText [type="vuo.text.cut" version="2.0.0" label="Cut Text|<refresh>refresh\l|<text>text\l|<startPosition>startPosition\l|<characterCount>characterCount\l|<partialText>partialText\r" pos="420,180" _startPosition="2" _characterCount="10"];
+ChangeItemInList3 [type="vuo.list.change.VuoInteger" version="1.1.0" label="Change Item in List|<refresh>refresh\l|<list>list\l|<position>position\l|<newItem>newItem\l|<expandListIfNeeded>expandListIfNeeded\l|<modifiedList>modifiedList\r" pos="2280,-375" _expandListIfNeeded="false"];
+ChangeItemInList5 [type="vuo.list.change.VuoBoolean" version="1.1.0" label="Change Item in List|<refresh>refresh\l|<list>list\l|<position>position\l|<newItem>newItem\l|<expandListIfNeeded>expandListIfNeeded\l|<modifiedList>modifiedList\r" pos="825,-225" _expandListIfNeeded="false"];
+ConvertTextToInteger3 [type="vuo.type.text.integer" version="1.0.1" label="Convert Text to Integer|<refresh>refresh\l|<text>text\l|<integer>integer\r" pos="720,375"];
+CountWithinRange [type="vuo.math.countWithinRange.VuoInteger" version="1.0.0" label="Count within Range|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<minimum>minimum\l|<maximum>maximum\l|<wrapMode>wrapMode\l|<count>count\r" pos="2085,-285" _increment="1" _decrement="1" _minimum="14" _maximum="16" _wrapMode="\"wrap\""];
+CutText [type="vuo.text.cut" version="2.0.0" label="Cut Text|<refresh>refresh\l|<text>text\l|<startPosition>startPosition\l|<characterCount>characterCount\l|<partialText>partialText\r" pos="390,195" _startPosition="2" _characterCount="2"];
 FilterController4 [type="vuo.midi.filter.controller" version="2.0.0" label="Filter Controller|<refresh>refresh\l|<controller>controller\l|<channel>channel\l|<controllerNumber>controllerNumber\l|<value>value\r" pos="30,-150" _channel="5"];
 FilterController5 [type="vuo.midi.filter.controller" version="2.0.0" label="Filter Controller|<refresh>refresh\l|<controller>controller\l|<channel>channel\l|<controllerNumber>controllerNumber\l|<value>value\r" pos="30,-30" _channel="2"];
-FireOnStart2 [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-120,-405" _started_eventThrottling="enqueue"];
+FireOnStart2 [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-120,-375" _started_eventThrottling="enqueue"];
+FireOnStart3 [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="1170,-600" _started_eventThrottling="enqueue"];
 GetControllerValues3 [type="vuo.midi.get.controller" version="1.0.0" label="Get Controller Values|<refresh>refresh\l|<controller>controller\l|<channel>channel\r|<controllerNumber>controllerNumber\r|<value>value\r" pos="-225,60"];
+GetItemFromList3 [type="vuo.list.get.VuoInteger" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="1710,-330"];
 GetItemFromList5 [type="vuo.list.get.VuoBoolean" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="1170,-75"];
-GetMessageValues2 [type="vuo.osc.message.get.1.VuoReal" version="1.0.1" label="Get Message Values|<refresh>refresh\l|<message>message\l|<address>address\r|<data1>data1\r" pos="240,270"];
+GetMessageValues2 [type="vuo.osc.message.get.1.VuoReal" version="1.0.1" label="Get Message Values|<refresh>refresh\l|<message>message\l|<address>address\r|<data1>data1\r" pos="165,270"];
+HoldList3 [type="vuo.data.hold.list.VuoInteger" version="1.0.0" label="Hold List|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="1785,-525"];
 HoldList5 [type="vuo.data.hold.list.VuoBoolean" version="1.0.0" label="Hold List|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="840,-375"];
 HoldList8 [type="vuo.data.hold.list.VuoBoolean" version="1.0.0" label="Hold List|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="1050,-135"];
 HoldValue3 [type="vuo.data.hold.VuoInteger" version="2.0.0" label="Hold Value|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="525,-225"];
 HoldValue6 [type="vuo.data.hold.VuoInteger" version="2.0.0" label="Hold Value|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="525,60"];
-HoldValue7 [type="vuo.data.hold.VuoMidiController" version="2.0.0" label="Hold Value|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="1515,30"];
+HoldValue7 [type="vuo.data.hold.VuoMidiController" version="2.0.0" label="Hold Value|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="2475,30"];
 IsIntegerNonzero7 [type="vuo.type.integer.boolean" version="1.0.1" label="Is Integer Nonzero|<refresh>refresh\l|<integer>integer\l|<boolean>boolean\r" pos="540,-195"];
-MakeController3 [type="vuo.midi.make.controller" version="1.0.0" label="Make Controller|<refresh>refresh\l|<channel>channel\l|<controllerNumber>controllerNumber\l|<value>value\l|<controller>controller\r" pos="1350,45" _channel="16" _value="60"];
+MakeController3 [type="vuo.midi.make.controller" version="1.0.0" label="Make Controller|<refresh>refresh\l|<channel>channel\l|<controllerNumber>controllerNumber\l|<value>value\l|<controller>controller\r" pos="2310,45" _value="60"];
 MakeController4 [type="vuo.midi.make.controller" version="1.0.0" label="Make Controller|<refresh>refresh\l|<channel>channel\l|<controllerNumber>controllerNumber\l|<value>value\l|<controller>controller\r" pos="615,255" _channel="3"];
-MakeList5 [type="vuo.list.make.2.VuoInteger" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="672,-214" _2="1"];
-MakeList6 [type="vuo.list.make.2.VuoInteger" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1032,-49" _1="1"];
-MakeList7 [type="vuo.list.make.0.VuoBoolean" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="1003,-124"];
-ReceiveMIDIEvents [type="vuo.midi.receive" version="2.1.2" label="Receive MIDI Events|<refresh>refresh\l|<device>device\l|<receivedNote>receivedNote\r|<receivedController>receivedController\r|<receivedPitchBend>receivedPitchBend\r" pos="-435,-45" _device="\{\"id\":-1,\"name\":\"Midi Fighter Twister\"\}" _receivedNote_eventThrottling="enqueue" _receivedController_eventThrottling="enqueue" _receivedPitchBend_eventThrottling="enqueue"];
-ReceiveOSCMessages2 [type="vuo.osc.receive2" version="2.0.0" label="Receive OSC Messages|<refresh>refresh\l|<device>device\l|<receivedMessage>receivedMessage\r" pos="45,270" _device="null" _receivedMessage_eventThrottling="enqueue"];
+MakeList13 [type="vuo.list.make.2.VuoInteger" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1544,-229" _1="1"];
+MakeList19 [type="vuo.list.make.2.VuoInteger" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1889,-229" _2="1"];
+MakeList5 [type="vuo.list.make.2.VuoInteger" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="659,-214" _2="1"];
+MakeList6 [type="vuo.list.make.2.VuoInteger" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1019,-49" _1="1"];
+MakeList7 [type="vuo.list.make.0.VuoBoolean" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="1009,-124"];
+ReceiveMIDIEvents [type="vuo.midi.receive" version="2.1.1" label="Receive MIDI Events|<refresh>refresh\l|<device>device\l|<receivedNote>receivedNote\r|<receivedController>receivedController\r|<receivedPitchBend>receivedPitchBend\r" pos="-435,-45" _device="{\"id\":-1,\"name\":\"Midi Fighter Twister\"}" _receivedNote_eventThrottling="enqueue" _receivedController_eventThrottling="enqueue" _receivedPitchBend_eventThrottling="enqueue"];
+ReceiveOSCMessages2 [type="vuo.osc.receive2" version="2.0.0" label="Receive OSC Messages|<refresh>refresh\l|<device>device\l|<receivedMessage>receivedMessage\r" pos="-30,270" _device="null" _receivedMessage_eventThrottling="enqueue"];
 Round2 [type="vuo.math.round" version="2.0.0" label="Round|<refresh>refresh\l|<real>real\l|<rounded>rounded\r" pos="810,390"];
 Scale2 [type="vuo.math.scale.VuoReal" version="2.0.0" label="Scale|<refresh>refresh\l|<value>value\l|<start>start\l|<end>end\l|<scaledStart>scaledStart\l|<scaledEnd>scaledEnd\l|<limitToRange>limitToRange\l|<scaledValue>scaledValue\r" pos="420,330" _start="0." _end="1." _scaledStart="17" _scaledEnd="47" _limitToRange="true"];
 SelectEventOutput2 [type="vuo.select.out.boolean.event" version="2.0.0" label="Select Event Output|<refresh>refresh\l|<which>which\l|<in>in\l|<falseOption>falseOption\r|<trueOption>trueOption\r" pos="1320,-75"];
 SelectEventOutput4 [type="vuo.select.out.boolean.event" version="2.0.0" label="Select Event Output|<refresh>refresh\l|<which>which\l|<in>in\l|<falseOption>falseOption\r|<trueOption>trueOption\r" pos="300,-30"];
 SelectLatest2 [type="vuo.select.latest.2.VuoBoolean" version="1.0.0" label="Select Latest|<refresh>refresh\l|<option1>option1\l|<option2>option2\l|<latest>latest\r" pos="525,-150" _option1="true" _option2="false"];
-SendMIDIEvent3 [type="vuo.midi.send" version="2.1.0" label="Send MIDI Event|<refresh>refresh\l|<sendNote>sendNote\l|<sendController>sendController\l|<sendPitchBend>sendPitchBend\l|<device>device\l" pos="1665,0" _device="\{\"id\":-1,\"name\":\"To VDMX\"\}"];
-SendMIDIEvent4 [type="vuo.midi.send" version="2.1.0" label="Send MIDI Event|<refresh>refresh\l|<sendNote>sendNote\l|<sendController>sendController\l|<sendPitchBend>sendPitchBend\l|<device>device\l" pos="855,225" _device="\{\"id\":-1,\"name\":\"Midi Fighter Twister\"\}"];
+SendMIDIEvent3 [type="vuo.midi.send" version="2.1.0" label="Send MIDI Event|<refresh>refresh\l|<device>device\l|<sendNote>sendNote\l|<sendController>sendController\l|<sendPitchBend>sendPitchBend\l" pos="2625,0" _device="{\"id\":-1,\"name\":\"To VDMX\"}"];
+SendMIDIEvent4 [type="vuo.midi.send" version="2.1.0" label="Send MIDI Event|<refresh>refresh\l|<device>device\l|<sendNote>sendNote\l|<sendController>sendController\l|<sendPitchBend>sendPitchBend\l" pos="855,225" _device="{\"id\":-1,\"name\":\"Midi Fighter Twister\"}"];
+ShareValue3 [type="vuo.data.share.VuoInteger" version="1.0.0" label="Share Value|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="1350,-495" _value="14"];
+ShareValue5 [type="vuo.data.share.VuoInteger" version="1.0.0" label="Share Value|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="1185,-270"];
 ShareValue8 [type="vuo.data.share.VuoBoolean" version="1.0.0" label="Share Value|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="60,-270" _value="false"];
 
+Add2:sum -> ChangeItemInList3:position;
+Add2:sum -> GetItemFromList3:which;
 Add3:sum -> ChangeItemInList5:position;
 Add4:sum -> GetItemFromList5:which;
+Add6:sum -> CountWithinRange:setCount;
+BuildList3:buildItem -> ShareValue3:refresh;
+BuildList3:builtList -> HoldList3:initialValue;
 BuildList5:buildItem -> ShareValue8:refresh;
 BuildList5:builtList -> HoldList5:initialValue;
+ChangeItemInList3:modifiedList -> HoldList3:newValue;
 ChangeItemInList5:modifiedList -> HoldList5:newValue;
 ChangeItemInList5:modifiedList -> HoldList8:newValue;
-ConvertTextToInteger:integer -> MakeController4:controllerNumber;
-CutText:partialText -> ConvertTextToInteger:text;
+ConvertTextToInteger3:integer -> MakeController4:controllerNumber;
+CountWithinRange:count -> ChangeItemInList3:newItem;
+CountWithinRange:count -> MakeController3:channel;
+CutText:partialText -> ConvertTextToInteger3:text;
 FilterController4:value -> HoldList5:refresh;
 FilterController4:value -> HoldValue3:refresh;
 FilterController4:value -> SelectLatest2:option1 [event=true];
 FilterController5:value -> IsIntegerNonzero7:integer;
 FireOnStart2:started -> BuildList5:fire;
+FireOnStart3:started -> BuildList3:fire;
 GetControllerValues3:controllerNumber -> FilterController4:controllerNumber;
 GetControllerValues3:controllerNumber -> FilterController5:controllerNumber;
 GetControllerValues3:controllerNumber -> HoldValue3:newValue;
 GetControllerValues3:controllerNumber -> HoldValue6:newValue;
+GetItemFromList3:item -> MakeList19:1;
 GetItemFromList5:item -> SelectEventOutput2:which;
 GetMessageValues2:address -> CutText:text;
 GetMessageValues2:data1 -> Scale2:value;
+HoldList3:heldValue -> ChangeItemInList3:list;
+HoldList3:heldValue -> GetItemFromList3:list;
 HoldList5:heldValue -> ChangeItemInList5:list;
 HoldList8:heldValue -> GetItemFromList5:list;
 HoldValue3:heldValue -> MakeList5:1;
 HoldValue6:heldValue -> MakeController3:controllerNumber;
 HoldValue6:heldValue -> MakeList6:2;
+HoldValue6:heldValue -> ShareValue5:value;
 HoldValue7:heldValue -> SendMIDIEvent3:sendController;
 IsIntegerNonzero7:boolean -> SelectEventOutput4:which;
 MakeController3:controller -> HoldValue7:newValue;
 MakeController4:controller -> SendMIDIEvent4:sendController;
+MakeList13:list -> Add2:values;
+MakeList19:list -> Add6:values;
 MakeList5:list -> Add3:values;
 MakeList6:list -> Add4:values;
 MakeList7:list -> HoldList8:initialValue;
@@ -81,6 +107,7 @@ ReceiveMIDIEvents:receivedController -> GetControllerValues3:controller;
 ReceiveOSCMessages2:receivedMessage -> GetMessageValues2:message;
 Round2:rounded -> MakeController4:value;
 Scale2:scaledValue -> Round2:real;
+SelectEventOutput2:falseOption -> HoldList3:refresh;
 SelectEventOutput2:falseOption -> HoldValue7:refresh;
 SelectEventOutput4:falseOption -> HoldList8:refresh;
 SelectEventOutput4:falseOption -> HoldValue6:refresh;
@@ -88,5 +115,7 @@ SelectEventOutput4:trueOption -> HoldList5:refresh;
 SelectEventOutput4:trueOption -> HoldValue3:refresh;
 SelectEventOutput4:trueOption -> SelectLatest2:option2;
 SelectLatest2:latest -> ChangeItemInList5:newItem;
+ShareValue3:sameValue -> BuildList3:builtItem;
+ShareValue5:sameValue -> MakeList13:2;
 ShareValue8:sameValue -> BuildList5:builtItem;
 }
